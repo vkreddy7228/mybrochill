@@ -7,17 +7,17 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp">
+        android:layout_marginTop="@dimen/five_dp">
 
         <TextView
             android:id="@+id/tweetsList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#8BC34A"
-            android:text="Tweet"
+            android:text="@string/tweet"
             android:textColor="@color/white"
-            android:textSize="25sp"
-            android:padding="5dp">
+            android:textSize="@dimen/twenty_five_sp"
+            android:padding="@dimen/five_dp">
         </TextView>
     </androidx.cardview.widget.CardView>
 </LinearLayout>

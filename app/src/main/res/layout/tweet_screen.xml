@@ -8,47 +8,57 @@
         android:id="@+id/loginTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tweet"
+        android:text="@string/tweet"
         android:textStyle="bold"
-        android:textSize="20dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="10dp"
+        android:textSize="@dimen/twenty_sp"
+        android:layout_marginTop="@dimen/five_dp"
+        android:layout_marginStart="@dimen/ten_dp"
         android:textColor="@color/black">
     </TextView>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:layout_marginTop="5dp"
+        android:layout_height="@dimen/five_dp"
+        android:layout_marginTop="@dimen/five_dp"
         android:background="@color/black">
     </View>
 
     <EditText
         android:id="@+id/tweetScreenText"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:hint="Add tweet"
-        android:textSize="20dp"
-        android:gravity="top|left"
-        android:padding="10dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/textview_border">
+        android:layout_height="@dimen/three_hundred_dp"
+        android:hint="@string/add_tweet_hint"
+        android:textSize="@dimen/twenty_sp"
+        android:gravity="top|start"
+        android:padding="@dimen/ten_dp"
+        android:layout_marginStart="@dimen/twenty_dp"
+        android:layout_marginEnd="@dimen/twenty_dp"
+        android:layout_marginTop="@dimen/twenty_dp"
+        android:background="@drawable/textview_border"
+        android:autofillHints="no"
+        android:inputType="text">
     </EditText>
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="30dp">
+        android:layout_marginBottom="@dimen/thirty_dp">
         <Button
             android:id="@+id/tweetPost"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Post"
+            android:text="@string/post"
             android:layout_alignParentBottom="true">
         </Button>
-    </RelativeLayout>
 
+        <ProgressBar
+            android:id="@+id/tweetPostProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tweetPost"
+            android:layout_alignParentBottom="true"
+            android:visibility="invisible">
+        </ProgressBar>
+    </RelativeLayout>
 </LinearLayout>

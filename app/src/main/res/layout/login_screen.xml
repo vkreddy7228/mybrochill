@@ -5,10 +5,10 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/signUpTextView"
+        android:id="@+id/loginTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/signup"
+        android:text="@string/login"
         android:textStyle="bold"
         android:textSize="@dimen/twenty_sp"
         android:layout_marginTop="@dimen/five_dp"
@@ -24,67 +24,37 @@
     </View>
 
     <EditText
-        android:id="@+id/signUpScreenFirstName"
+        android:id="@+id/loginScreenEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/first_name"
+        android:hint="@string/enter_email"
         android:textSize="@dimen/twenty_sp"
         android:padding="@dimen/twenty_dp"
         android:layout_marginStart="@dimen/twenty_dp"
         android:layout_marginEnd="@dimen/twenty_dp"
         android:layout_marginTop="@dimen/twenty_dp"
         android:background="@drawable/textview_border"
-        android:inputType="text"
-        android:importantForAutofill="no">
-    </EditText>
-
-    <EditText
-        android:id="@+id/signUpScreenLastName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/last_name"
-        android:textSize="@dimen/twenty_sp"
-        android:padding="@dimen/twenty_dp"
-        android:layout_marginStart="@dimen/twenty_dp"
-        android:layout_marginEnd="@dimen/twenty_dp"
-        android:layout_marginTop="@dimen/ten_dp"
-        android:background="@drawable/textview_border"
-        android:inputType="text"
-        android:importantForAutofill="no">
-    </EditText>
-
-    <EditText
-        android:id="@+id/signUpScreenEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/email"
-        android:textSize="@dimen/twenty_sp"
-        android:padding="@dimen/twenty_dp"
-        android:layout_marginStart="@dimen/twenty_dp"
-        android:layout_marginEnd="@dimen/twenty_dp"
-        android:layout_marginTop="@dimen/ten_dp"
-        android:background="@drawable/textview_border"
         android:inputType="textEmailAddress"
         android:importantForAutofill="no">
     </EditText>
 
     <EditText
-        android:id="@+id/signUpScreenPassword"
+        android:id="@+id/loginScreenPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/password"
+        android:hint="@string/enter_password"
         android:textSize="@dimen/twenty_sp"
+        android:inputType="textPassword"
         android:padding="@dimen/twenty_dp"
         android:layout_marginStart="@dimen/twenty_dp"
         android:layout_marginEnd="@dimen/twenty_dp"
-        android:layout_marginTop="@dimen/ten_dp"
+        android:layout_marginTop="@dimen/twenty_dp"
         android:background="@drawable/textview_border"
-        android:inputType="textPassword"
         android:importantForAutofill="no">
     </EditText>
 
     <Button
-        android:id="@+id/signUpNext"
+        android:id="@+id/loginNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -93,7 +63,7 @@
     </Button>
 
     <ProgressBar
-        android:id="@+id/signupProgressBar"
+        android:id="@+id/loginProgressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"

@@ -1,6 +1,5 @@
 package com.example.brochill.adapter
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,15 +20,14 @@ class TweetsAdapter(private val tweets: List<TweetResponse>) : RecyclerView.Adap
     }
 
     override fun getItemCount(): Int {
-        Log.v("tweets count", tweets.size.toString())
         return tweets.size
     }
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tweetText : TextView = itemView.findViewById(R.id.tweetsList)
+        private val tweetText : TextView = itemView.findViewById(R.id.tweetsList)
 
         fun bindView(tweetResponse: TweetResponse) {
-            tweetText.setText(tweetResponse.mTweet)
+            tweetText.text = tweetResponse.mTweet
         }
     }
 }

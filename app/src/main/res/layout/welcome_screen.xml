@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,37 +9,38 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome"
+        android:text="@string/welcome"
         android:textStyle="bold"
-        android:textSize="20dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="10dp"
+        android:textSize="@dimen/twenty_sp"
+        android:layout_marginTop="@dimen/five_dp"
+        android:layout_marginStart="@dimen/ten_dp"
         android:textColor="@color/black">
     </TextView>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:layout_marginTop="5dp"
+        android:layout_height="@dimen/five_dp"
+        android:layout_marginTop="@dimen/five_dp"
         android:background="@color/black">
     </View>
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/hundred_dp"
+        android:layout_height="@dimen/hundred_dp"
         android:layout_gravity="center_horizontal"
         android:src="@drawable/brochill"
-        android:layout_marginTop="25dp">
+        android:layout_marginTop="@dimen/twenty_five_dp"
+        android:contentDescription="@string/app_logo">
     </ImageView>
 
     <TextView
-        android:id="@+id/welcomText"
+        android:id="@+id/welcomeText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/twenty_five_dp"
         android:text="@string/welcome_text"
-        android:padding="20dp"
-        android:textSize="15sp"
+        android:padding="@dimen/twenty_dp"
+        android:textSize="@dimen/fifteen_sp"
         android:textColor="@color/black"
         android:gravity="center">
     </TextView>
@@ -49,12 +49,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="30dp">
+        android:layout_marginBottom="@dimen/thirty_dp">
         <Button
             android:id="@+id/welcomeNextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Start"
+            android:text="@string/start"
             android:layout_alignParentBottom="true" >
         </Button>
     </RelativeLayout>

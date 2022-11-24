@@ -1,4 +1,21 @@
 <resources>
     <string name="welcome_text">Local is the New Global. India\'s biggest localized content.</string>
     <string name="app_name">BroChill</string>
+    <string name="app_logo">Bro Chill Image</string>
+    <string name="welcome">Welcome</string>
+    <string name="home_screen">Home Screen</string>
+    <string name="start">Start</string>
+    <string name="next">Next</string>
+    <string name="tweet">Tweet</string>
+    <string name="post">Post</string>
+    <string name="add_tweet_hint">Add tweet</string>
+    <string name="signup">Signup</string>
+    <string name="login">Login</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="enter_email">Enter email</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="floating_button_cd">New Tweet Button</string>
 </resources>

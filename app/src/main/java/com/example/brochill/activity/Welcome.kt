@@ -21,5 +21,4 @@ class Welcome : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
 }

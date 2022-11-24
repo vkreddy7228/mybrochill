@@ -1,6 +1,7 @@
-package com.example.brochill
+package com.example.brochill.util
 
 import android.content.Context
+import com.example.brochill.common.AppConstants
 
 class AppCoreUtils {
     companion object {
@@ -8,14 +9,14 @@ class AppCoreUtils {
             val sharedPref =
                 context.getSharedPreferences("com.example.brochill", Context.MODE_PRIVATE)
             with(sharedPref.edit()) {
-                putString("token", value).apply()
+                putString(AppConstants.mToken, value).apply()
             }
         }
 
         fun getAuthKey(context: Context): String? {
             val sharedPref =
                 context.getSharedPreferences("com.example.brochill", Context.MODE_PRIVATE)
-            return sharedPref.getString("token", null)
+            return sharedPref.getString(AppConstants.mToken, null)
         }
     }
 }

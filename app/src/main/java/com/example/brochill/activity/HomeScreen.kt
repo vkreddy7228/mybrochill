@@ -1,37 +1,43 @@
 package com.example.brochill.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.brochill.adapter.TweetsAdapter
-import com.example.brochill.AppCoreUtils
-import com.example.brochill.dataClass.TweetResponse
-import com.example.brochill.`interface`.ApiInterface
 import com.example.brochill.R
+import com.example.brochill.ServiceBuilder
+import com.example.brochill.`interface`.ApiInterface
+import com.example.brochill.adapter.TweetsAdapter
+import com.example.brochill.dataClass.TweetResponse
+import com.example.brochill.util.AppCoreUtils
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
 class HomeScreen : AppCompatActivity(){
 
-    private var mBaseUrl: String = "https://wern-api.brochill.app/"
     private lateinit var mRecyclerView: RecyclerView
+    private lateinit var mFloatingButton : FloatingActionButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home_screen)
 
         mRecyclerView = findViewById(R.id.tweetsRecyclerView)
+        mFloatingButton = findViewById(R.id.floatingButton)
 
-        val retrofit = Retrofit.Builder()
-            .baseUrl(mBaseUrl)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-        val api = retrofit.create(ApiInterface::class.java)
+        getTweets()
+        mFloatingButton.setOnClickListener {
+            val intent = Intent(this, NewTweet::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun getTweets() {
+        val api = ServiceBuilder.buildService(ApiInterface::class.java)
         AppCoreUtils.getAuthKey(this)?.let {
             api.getAllTweets(it).enqueue(object : Callback<List<TweetResponse>?> {
                 override fun onResponse(
